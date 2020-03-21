@@ -1,0 +1,24 @@
+<status>
+<l1_module_status_gsm>1</l1_module_status_gsm>
+<l1_module_title_gsm/>
+<l1_module_status><a href="?type=list&down=1&line=1">Y</a></l1_module_status>
+<l1_module_title>Click to shut down module</l1_module_title>
+<l1_gsm_sim>Y</l1_gsm_sim>
+<l1_gsm_status>Y</l1_gsm_status>
+<l1_status_line>Y</l1_status_line>
+<l1_line_state>IDLE</l1_line_state>
+<l1_sms_login/>
+<l1_smb_login><font color="#FF0000">N</font></l1_smb_login>
+<l1_gsm_signal>31</l1_gsm_signal>
+<l1_gsm_cur_oper>Plus</l1_gsm_cur_oper>
+<l1_gsm_cur_bst/>
+<l1_lac/>
+<l1_sim_remain>NO LIMIT</l1_sim_remain>
+<l1_nocall_t>5406</l1_nocall_t>
+<l1_acd>0</l1_acd>
+<l1_asr>0</l1_asr>
+<l1_callt>0</l1_callt>
+<l1_callc>0/7</l1_callc>
+<l1_rct>2020-03-18 01:08:56</l1_rct>
+<l1_sms_count>NO LIMIT</l1_sms_count>
+</status>
