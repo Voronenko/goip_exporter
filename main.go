@@ -16,7 +16,9 @@ import (
     "time"
 )
 
-var errKeyNotFound = errors.New("key not found")
+var (
+    errKeyNotFound = errors.New("key not found")
+)
 
 // Timestamp to beat the cache on GOIP device
 func makeTimestamp() int64 {
@@ -321,6 +323,8 @@ func main() {
     log.Print("Starting goip_exporter")
     var exporterInstance = NewExporter(*goipAddress, *goipUser, *goipPassword)
     prometheus.MustRegister(exporterInstance)
+    prometheus.Unregister(prometheus.NewProcessCollector(prometheus.ProcessCollectorOpts{}))
+    prometheus.Unregister(prometheus.NewGoCollector())
     http.Handle(*metricsPath, promhttp.Handler())
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
         w.Write([]byte(`<html>
