@@ -77,4 +77,8 @@ Some good notes on go exporter
 
 https://www.percona.com/sites/default/files/presentations/Writing%20Prometheus%20exporters.pdf
 
+
+Publishing go binaries for platforms:
+
+https://goreleaser.com/install/
  
