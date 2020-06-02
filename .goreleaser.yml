@@ -22,14 +22,14 @@ snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
   # set it to true if you wish to skip the changelog generation
-  skip: true
+  skip: false
   sort: asc
   filters:
     exclude:
-    - '^docs:'
-    - '^test:'
-    - typo
-    - (?i)foo
+    - '^docs'
+    - '^test'
+    - '^typo'
+    - '^chore('
 release:
   github:
 
@@ -40,7 +40,7 @@ release:
 
   # If set to true, will not auto-publish the release.
   # Default is false.
-  draft: true
+  draft: false
 
   # If set to auto, will mark the release as not ready for production
   # in case there is an indicator for this in the tag e.g. v1.0.0-rc1
