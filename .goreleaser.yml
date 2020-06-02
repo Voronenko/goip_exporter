@@ -30,6 +30,9 @@ changelog:
     - '^test'
     - '^typo'
     - '^chore'
+    - '^Bumps version to'
+    - '^Merge branch'
+    - '^Merge tag'
 release:
   github:
 
