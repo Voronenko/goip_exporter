@@ -21,8 +21,14 @@ checksum:
 snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
+  # set it to true if you wish to skip the changelog generation
+  skip: true
   sort: asc
   filters:
     exclude:
     - '^docs:'
     - '^test:'
+    - typo
+    - (?i)foo
+release:
+  prerelease: auto
