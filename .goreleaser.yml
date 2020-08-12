@@ -9,6 +9,14 @@ before:
 builds:
 - env:
   - CGO_ENABLED=0
+  goos:
+    - linux
+  goarch:
+    - amd64
+    - arm
+    - arm64
+  goarm:
+    - 7
 archives:
 - replacements:
     darwin: Darwin
@@ -16,6 +24,7 @@ archives:
     windows: Windows
     386: i386
     amd64: x86_64
+  name_template: '{{ .Binary }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
 checksum:
   name_template: 'checksums.txt'
 snapshot:
@@ -30,6 +39,9 @@ changelog:
     - '^test'
     - '^typo'
     - '^chore'
+    - '^Bumps version to'
+    - '^Merge branch'
+    - '^Merge tag'
 release:
   github:
 
