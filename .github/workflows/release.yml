@@ -3,7 +3,7 @@ name: releaser
 on:
   push:
     branches:
-      - github-action
+      - arm-support
     tags:
       - '*'
 jobs:
