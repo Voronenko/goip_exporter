@@ -42,6 +42,39 @@ changelog:
     - '^Bumps version to'
     - '^Merge branch'
     - '^Merge tag'
+dockers:
+  -
+    dockerfile: Dockerfile
+    binaries:
+      - goip_exporter
+    goos: linux
+    goarch: amd64
+    goarm: ''
+    image_templates:
+      - "voronenko/goip_exporter:latest"
+      - "voronenko/goip_exporter:{{ .Tag }}"
+      - "voronenko/goip_exporter:v{{ .Major }}"
+    # Skips the docker push. Could be useful if you also do draft releases.
+    # If set to auto, the release will not be pushed to the docker repository
+    # in case there is an indicator for prerelease in the tag e.g. v1.0.0-rc1
+    # Defaults to false.
+    skip_push: false
+  -
+    dockerfile: Dockerfile
+    binaries:
+      - goip_exporter
+    goos: linux
+    goarch: arm
+    goarm: '7'
+    image_templates:
+      - "voronenkor/goip_exporter:pi"
+      - "voronenkor/goip_exporter:{{ .Tag }}-pi"
+      - "voronenkor/goip_exporter:v{{ .Major }}-pi"
+    # Skips the docker push. Could be useful if you also do draft releases.
+    # If set to auto, the release will not be pushed to the docker repository
+    # in case there is an indicator for prerelease in the tag e.g. v1.0.0-rc1
+    # Defaults to false.
+    skip_push: false
 release:
   github:
 
