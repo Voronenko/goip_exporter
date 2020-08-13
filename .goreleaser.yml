@@ -42,6 +42,29 @@ changelog:
     - '^Bumps version to'
     - '^Merge branch'
     - '^Merge tag'
+dockers:
+  -
+    dockerfile: Dockerfile
+    binaries:
+      - goip_exporter
+    goos: linux
+    goarch: amd64
+    goarm: ''
+    image_templates:
+      - "voronenko/goip_exporter:latest"
+      - "voronenko/goip_exporter:{{ .Tag }}"
+      - "voronenko/goip_exporter:v{{ .Major }}"
+  -
+    dockerfile: Dockerfile
+    binaries:
+      - goip_exporter
+    goos: linux
+    goarch: arm
+    goarm: '7'
+    image_templates:
+      - "voronenkor/goip_exporter:pi"
+      - "voronenkor/goip_exporter:{{ .Tag }}-pi"
+      - "voronenkor/goip_exporter:v{{ .Major }}-pi"
 release:
   github:
 

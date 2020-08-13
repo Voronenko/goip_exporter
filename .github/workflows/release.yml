@@ -3,7 +3,7 @@ name: releaser
 on:
   push:
     branches:
-      - github-action
+      - docker-pipeline
     tags:
       - '*'
 jobs:
