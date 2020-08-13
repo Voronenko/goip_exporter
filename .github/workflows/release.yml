@@ -24,7 +24,7 @@ jobs:
       - name: Login to GitHub Docker Registry
         run: docker login docker.io --username $DOCKER_USER --password $DOCKER_PASSWORD
         env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USER }}
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Run GoReleaser
