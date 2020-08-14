@@ -1,0 +1,11 @@
+FROM arm32v7/golang
+
+EXPOSE 9177
+
+RUN mkdir -p /app
+COPY scripts/start.sh /app
+COPY dist/goip_exporter /app
+
+RUN chmod 755 /app/*
+
+ENTRYPOINT ["/app/start.sh"]
