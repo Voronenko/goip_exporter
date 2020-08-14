@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  goip_exporter:
+    image: voronenko/goip_exporter:1.0.0-pi
+    ports:
+      - 9177:9177
+    restart: always
+    networks:
+      - default
+      - traefik-public
+networks:
+  traefik-public:
+    external: true
+
