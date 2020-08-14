@@ -1,0 +1,16 @@
+name: Keep images
+
+on:  
+  schedule:
+    - cron: '0 0 * * *'  # every day at midnight
+
+jobs:
+  keep-image:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Keep image latest
+        run: docker pull voronenko/goip_exporter:latest
+      -
+        name: Keep image current
+        run: docker pull voronenko/goip_exporter:v1
