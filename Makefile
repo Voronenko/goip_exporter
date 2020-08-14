@@ -30,4 +30,4 @@ docker-arm-build:
 	docker build -f Dockerfile.arm -t voronenko/goip_exporter:$(VERSION)-pi .
 
 docker-arm-push:
-	docker build -f Dockerfile.arm -t voronenko/goip_exporter:$(VERSION)-pi .
+	docker push voronenko/goip_exporter:$(VERSION)-pi
